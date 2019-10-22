@@ -39,7 +39,7 @@ const compareValidVersionNumbers = (version1, version2) => {
       return 'After';
     } else if (parseSegment(v1Segments[i], i) < parseSegment(v2Segments[i], i)) {
       return 'Before';
-    }
+    };
   };
   // Handle the case where the second version number is longer than the first.
   if (v2Segments.length > v1Segments.length && +v2Segments[v1Segments.length] > 0) {
@@ -68,7 +68,7 @@ const compareStringsAsVersionNumbers = (string1, string2) => {
       return 'After';
     } else if (scrubbedString1[i].charCodeAt(0) < scrubbedString2[i].charCodeAt(0)) {
       return 'Before';
-    }
+    };
   };
   // If string two is longer, it is automatically 'after' the first.
   if (scrubbedString2.length > scrubbedString1.length) {
