@@ -6,10 +6,11 @@ This is a simple web service that provides an endpoint to compare two software v
 To run the service on your host machine, you'll need to have NodeJS installed. Once you've cloned the repository, you'll want to run:
 
 `npm install`
-&&
+
 `node server.js`
 
 This will start up the service on your local machine, and you can now make requests to `http://localhost:8080/comparatron`. GET requests to the endpoint should resemble the following examples, using the `first` & `second` query parameters:
+
 `http://localhost:8080/comparatron/?first=1.1.1&second=1.1.1` -> `Equal`
 `http://localhost:8080/comparatron/?first=0.4.12&second=3.1.19` -> `Before`
 `http://localhost:8080/comparatron/?first=Non-version number strings?&second=Can be compared too!` -> `After`
