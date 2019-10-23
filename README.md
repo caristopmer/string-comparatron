@@ -7,14 +7,13 @@ The preferred way to run the application is using Docker. To do so, once you've 
 
 To run the service on your host machine without Docker, you'll need to have NodeJS installed. Once you've cloned the repository, you'll want to run:
 
-`npm install`
-
+`npm install`\
 `npm start`
 
 This will start up the service on your local machine, and you can now make requests to `http://localhost:8080/comparatron`. GET requests to the endpoint should resemble the following examples, using the `first` & `second` query parameters:
 
-`http://localhost:8080/comparatron?first=1.1.1&second=1.1.1` -> `Equal`
-`http://localhost:8080/comparatron?first=0.4.12&second=3.1.19` -> `Before`
+`http://localhost:8080/comparatron?first=1.1.1&second=1.1.1` -> `Equal`\
+`http://localhost:8080/comparatron?first=0.4.12&second=3.1.19` -> `Before`\
 `http://localhost:8080/comparatron?first=Non-version number strings?&second=Can be compared too!` -> `After`
 
 ## Notes
